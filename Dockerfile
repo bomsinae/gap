@@ -9,7 +9,7 @@ RUN pip install -r requirements.txt
 
 WORKDIR ./myapp
 
-CMD gunicorn main:app --bind 0.0.0.0:8001
+CMD ["gunicorn", "-b", "0.0.0.0:8001", "main:app"]
 
 EXPOSE 8001
 
